@@ -37,6 +37,11 @@
     color: rgb(252, 249, 249);
 }
 
+.menu a:hover {
+    color: rgb(243, 255, 71);
+}
+
+
 /* RESPONSIVE TABLET */
 @media only screen and (max-width: 768px) {
     .menu ul {
@@ -122,7 +127,28 @@
     font-style: initial;
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
+    animation-name: cambiarcolor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
+
+@keyframes cambiarcolor {
+    0% {
+        background-color: rgb(128, 141, 6);
+        color: aliceblue;
+        transform: matrix(1);
+    }
+    50% {
+        transition: ease-in-out;
+        background-color: brown;
+    }
+    100% {
+        background-color: rgb(100, 90, 3);
+        color: gold;
+        transform: scale(1);
+    }
+}
+
 
 .subtitulo {
     padding: 40px;
@@ -192,6 +218,18 @@ h2 {
     width: 450px;
     height: 400px;
     object-fit: cover;
+    animation-name: cambiartamaño;
+    animation-duration: 4s;
+}
+
+
+@keyframes cambiartamaño {
+    0% {
+    transform: scale(.5);
+    }
+    100% {
+    transform: scale(1);
+    }
 }
 
 
@@ -404,6 +442,12 @@ h2 {
     color: rgb(5, 5, 5);
 }
 
+.container-contacto a:hover {
+    color: rgb(220, 77, 20);
+    font-size: 40px;
+    text-decoration-line: underline;
+    scale: (1.6);
+}
 
 .imagen-mapa {
     background-color: rgb(128, 141, 6);
