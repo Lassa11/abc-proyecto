@@ -9,114 +9,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Nunito:wght@700&family=Roboto+Condensed:wght@700&display=swap');
 
-.header-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 120%;
-    background-color: dimgray;
-    margin-bottom: 5px;
+
+.m-color {
+    background-color: rgb(7, 7, 7);
 }
 
-.div-logo img {
-    width: 30%;
-}
-
-.menu ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    margin-right: 30px;
-    gap: 30px;
-}
-
-.menu a {
-    text-decoration: none;
-    font-size: 30px;
-    color: rgb(252, 249, 249);
-}
-
-.menu a:hover {
-    color: rgb(243, 255, 71);
-}
-
-
-/* RESPONSIVE TABLET */
-@media only screen and (max-width: 768px) {
-    .menu ul {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        gap: 10px;
-        padding-bottom: 5px;
-    }
-    .menu a {
-        text-decoration: none;
-        font-size: 16px;
-        color: gray;
-    }
-}
-
-/* ACA FINALIZA EL HEADER */
-
-
-/* ---------------------Inicio carousel------------ */
-
-.slider {
-	width: 95%;
-	margin: auto;
-	overflow: hidden;
-}
-
-.slider ul {
-	display: flex;
-	padding: 0;
-	width: 400%;
-	
-	animation: cambio 20s infinite alternate linear;
-}
-
-.slider li {
-	width: 100%;
-	list-style: none;
-}
-
-.slider img {
-	width: 100%;
-    object-fit: cover;
-}
-
-@keyframes cambio {
-	0% {margin-left: 0;}
-	20% {margin-left: 0;}
-	
-	25% {margin-left: -100%;}
-	45% {margin-left: -100%;}
-	
-	50% {margin-left: -200%;}
-	70% {margin-left: -200%;}
-	
-	75% {margin-left: -300%;}
-	100% {margin-left: -300%;}
-}
-
-.slider img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    
-}
-
-/* ------------------------fin carousel--------- */
-
+/* Fin de Header */
 
 .video-puente {
     display: flex;
     justify-content: center;
     padding: 10px;
 }
-
 
 .titulo-principal {
     padding: 20px 10px;
@@ -181,35 +85,11 @@ h2 {
     transition: all 4s;
 }
 
-
 .parrafo-arquitectura {
     font-size: 20px;
     font-family: 'Nunito Sans', sans-serif;
     padding: 5px 0;
     margin: 5px;
-}
-
-.container-fotos {
-    display: grid;
-    grid-template-areas: 
-    'foto1 foto2'
-    'foto3 foto4';
-}
-
-.arquitectura-uno, .arquitectura-dos { 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 15px 0;
-} 
-
-.arquitectura-tres, .arquitectura-cuatro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 15px 0;
 }
 
 .arquitectura-1, .arquitectura-2, 
@@ -218,10 +98,10 @@ h2 {
     width: 450px;
     height: 400px;
     object-fit: cover;
+    padding: 35px;
     animation-name: cambiartamaño;
     animation-duration: 4s;
 }
-
 
 @keyframes cambiartamaño {
     0% {
@@ -230,145 +110,53 @@ h2 {
     100% {
     transform: scale(1);
     }
-}
+} 
 
-
-/* RESPONSIVE TABLET */
-@media only screen and (max-width: 768px) {
-    .container-fotos {
-        width: 100%;
-        height: auto;
-        display: grid; 
-        gap: 10px 0px; 
-        grid-template-areas: 
-        "foto1"
-        "foto2"
-        "foto3"
-        "foto4"; 
-    }
-}
-
-/* RESPONSIVE MOBILE */
-
-@media only screen and (max-width: 480px) {
-    .arquitectura-1, .arquitectura-2, 
-    .arquitectura-3, .arquitectura-4 {
-        width: 250PX;
-        height: 200PX;
-    }
-}
 /* ----- FIN SECCION ARQUITECTURA ------ */
 
-.container-ingenieria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    }
-    
-.ingenieria-uno { grid-area: 1 / 1 / 2 / 2; }
-.ingenieria-dos { grid-area: 1 / 2 / 2 / 3; }
-.ingenieria-tres { grid-area: 1 / 3 / 2 / 4; }
-
-.ingenieria, .ingenieria-2, .ingenieria-3 {
-    display: flex;
+.ingenieria-1, .ingenieria-2, .ingenieria-3 {
+    padding: 25px;
     max-width: 100%;
-    width: 80%;
-    height: 350px;
-    margin-top: 5px;
-    padding: 10px 12px;
-}
+    width: 450px;
+    height: 400px;
+    object-fit: cover;
+    
+} 
 
 .parrafo-ingenieria {
     text-align: center;
     font-size: 20px;
     font-family: 'Nunito Sans', sans-serif;
-    padding: 5px 0;
+    padding: 5px 10px;
     margin: 10px;
-}
-
-/* RESPONSIVE TABLET */
-@media only screen and (max-width: 768px) {
-    .container-ingenieria {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 5px;
-    }
-}
-
-/* RESPONSIVE MOBILE */
-
-@media only screen and (max-width: 480px) {
-    .ingenieria, .ingenieria-2, .ingenieria-3 {
-        width: 100%;
-        height: auto;
-    }
 }
 
 /* FIN DE SECCION INGENIERIA */
 
-
-.container-hidraulica {
-    display: flex;
-    justify-content: center;
-}
-
-.hidraulica, .hidraulica-2 {
-    max-width: 100%;
-    width: 480px;
-    height: 350px;
-    object-fit: cover;
+.hidraulica-1, .hidraulica-2 {
     padding: 15px;
+    max-width: 100%;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
 }
 
 .parrafo-hidraulica {
     text-align: center;
     font-size: 20px;
     font-family: 'Nunito Sans', sans-serif;
-    padding: 5px 0;
+    padding: 5px 5px;
     margin: 10px;
-}
-
-
-/* RESPONSIVE TABLET */
-@media only screen and (max-width: 768px) {
-    .container-hidraulica {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 5px;
-    }
-}
-
-/* RESPONSIVE MOBILE */
-
-@media only screen and (max-width: 480px) {
-    .hidraulica, .hidraulica-2 {
-        width: 250%;
-        height: auto;
-    }
 }
 
 /* FIN DE SECCION HIDRAULICA */
 
-.container-viales {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    }
-
-.viales-uno { grid-area: 1 / 1 / 2 / 2; }
-.viales-dos { grid-area: 1 / 2 / 2 / 3; }
-.viales-tres { grid-area: 1 / 3 / 2 / 4; }
-
-.viales, .viales-2, .viales-3 {
+.viales-1, .viales-2, .viales-3 {
     max-width: 100%;
-    width: 400px;
-    height: 350px;
-    margin-top: 10px;
-    padding: 10px 12px;
+    width: 600px;
+    height: 400px;
+    padding: 10px;
+    object-fit: cover;
 }
 
 .parrafo-viales {
@@ -379,51 +167,29 @@ h2 {
     margin: 10px;
 }
 
-/* RESPONSIVE TABLET */
-@media only screen and (max-width: 768px) {
-    .container-viales {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 5px;
-    }
-}
-
-/* RESPONSIVE MOBILE */
-
-@media only screen and (max-width: 480px) {
-    .viales, .viales-2, .viales-3 {
-        width: 100%;
-        height: auto;
-    }
-}
-
-
 /* Footer */
 
-.container-redes {
-    background-color: dimgray;
+.container-footer {
+    background-color: rgb(94, 97, 90);
     text-align: center;
-    grid-template-rows: repeat(3, 1fr);
-    padding: 50px 0;
-    gap: 10px;
+    align-items: center;
+    padding: 20px 0;
     display: flex;
-    justify-content: center;
 }
 
 .parrafo-footer {
-    font-size: 25px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
     font-family: 'Nunito Sans', sans-serif;
-    color: rgb(245, 238, 238);
-    padding: 5px 0;
-    margin: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .icono-Fc, .icono-Ig, .icono-In, .icono-Tw {
-    width: 5%;
-    height: auto;
+    max-width: 100%;
+    width: 90px;
+    height: 90px;
+    padding: 25px;
+    margin: 5px;
 }
 
 .container-contacto {
@@ -449,15 +215,6 @@ h2 {
     scale: (1.6);
 }
 
-.imagen-mapa {
-    background-color: rgb(128, 141, 6);
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    
-}
-
-
 /* RESPONSIVE TABLET */
 @media only screen and (max-width: 768px) {
     .container-redes {
@@ -479,94 +236,6 @@ h2 {
 }
 
 /* FIN DE FOOTER */
-
-.seccion-uno-contacto {
-    display: flex;
-    justify-content: center;
-}
-.h1-contacto {
-    padding: 5px;
-    margin: 20px 0 20px 0;
-    text-decoration: underline;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.5em;
-}
-
-.seccion-uno-contacto {
-    display: flex;
-    justify-content: center;
-}
-
-.h1-contacto {
-    padding: 5px;
-    margin: 20px 0 20px 0;
-    text-decoration: underline;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.5em;
-}
-
-
-.div-contacto {
-    display: flex;
-    justify-content: center;
-    margin: 15px auto;
-}
-
-.input, .textarea-uno {
-    width: 100%;
-    margin-bottom: 5%;
-}
-
-.textarea-uno {
-    padding-bottom: 40%;
-}
-
-.input-cuatro {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.seccion-tres-contacto {
-    width: 75%;
-    margin: auto;
-}
-
-.div-dos-seccion-tres {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2%;
-}
-
-.h2-contacto {
-    display: flex;
-    justify-content: center;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.5em;
-    padding: 2% 0;
-    margin: 2% 0; 
-}
-
-@media only screen and (max-width: 768px) {
-    .div-contacto {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-        
-    .h1-contacto {
-        font-size: 1.2em;
-        text-align: center;
-    }
-    .h2-contacto {
-        font-size: 1.2em;
-        text-align: center;
-    }
-}
-
-
-
 
 
 

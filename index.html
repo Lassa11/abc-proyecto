@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <title>ABC Construcciones</title>
@@ -13,41 +17,59 @@
 <body> 
     <header> 
         <div class="header-container">
-            <div class="div-logo">
-                <a href="./index.html">
-                <img class="img-logo" src="./src/multimedia/images/Logo.jpg" alt="Logo de ABC Construcciones"></a>
-            </div>
-                <nav class="menu">
-                    <ul class="lista-menu">
-                        <li class="menu-arquitectura"><a href="#Arquitectura">Arquitectura</a></li>
-                        <li class="menu-ingenieria"><a href="#Ingenieria">Ingenieria</a></li>
-                        <li class="menu-hidraulicas"><a href="#Hidraulicas">Hidráulicas</a></li>
-                        <li class="menu-viales"><a href="#Viales">Viales</a></li>
-                        <li class="menu-contacto"><a href="./src/paginas/contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
+            <nav class="navbar navbar-expand-lg navbar-light m-color">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="./src/multimedia/images/Logo.jpg" width="25%" alt="Logo de ABC Construcciones">
+                    </a>
+                                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon bg-white"></span>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <a class="nav-link active" aria-current="page" href="#" class="text-decoration-none m-2 btn btn-warning"></a>
+                        <li class="nav-item"><a href="#Arquitectura" class="text-decoration-none m-2 btn btn-warning">Arquitectura</a></li>
+                        <li class="nav-item"><a href="#Ingenieria" class="text-decoration-none m-2 btn btn-warning">Ingeniería</a></li>
+                        <li class="nav-item"><a href="#Hidraulicas" class="text-decoration-none m-2 btn btn-warning">Hidráulicas</a></li>
+                        <li class="nav-item"><a href="#Viales" class="text-decoration-none m-2 btn btn-warning">Viales</a></li>
+                        <li class="nav-item"><a href="./src/paginas/contacto.html" class="text-decoration-none m-2 btn btn-warning">Contacto</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
+
     <!-- Carousel de imágenes -->
-    <Section class="imagenes-carousel">
-        <div class="slider">
-            <ul>
-                <li>
-                    <img src="./src/multimedia/images/carousel1caminos.jpg" alt="Rutas y caminos">
-                </li>
-                <li>
-                    <img src="./src/multimedia/images/carousel2puente.jpg" alt="Puente">
-                </li>
-                <li>
-                    <img src="./src/multimedia/images/carousel3dique.jpg" alt="Dique">
-                </li>
-                <li>
-                    <img src="./src/multimedia/images/carousel3dique.jpg" alt="Dique">
-                </li>
-            </ul>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="./src/multimedia/images/carousel1retro.jpg" class="d-block w-100", height="500vh" alt="...">
+            </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./src/multimedia/images/carousel2puentenoche.jpg" class="d-block w-100", height="500vh" alt="...">
+                </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="./src/multimedia/images/carousel3dique1.jpg" class="d-block w-100", height="500vh" alt="...">
+            </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./src/multimedia/images/carousel4ferroviario.jpg" class="d-block w-100", height="500vh" alt="...">
+            </div>
         </div>
-    </Section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
     <!-- FIN CARROUSEL -->
+
     <section class="uno">
         <h1 class="titulo-principal">Ingeniería de valor</h1>
         <p class="subtitulo"> Desarrollamos obras de infraestructura con maquinaria y tecnología propia de alta calidad
@@ -61,104 +83,136 @@
         </div>
         <p class="parrafo-descripcion">Montaje Puente Lope de Vega - C.A.B.A.</p>
     </section>
-
-
+        <!-- Sección Arquitectura -->
     <section id="Arquitectura">
         <h2>Arquitectura</h2>
-        <div class="container-fotos">
-            <div class="arquitectura-uno">
-                <img class="arquitectura-1" src="./src/multimedia/images/complejo_Horizons.jpg"alt="Complejo de viviendas en Vicente Lopez">
-                <p class="parrafo-arquitectura">Complejo Horizons - Vte. López - Bs. As.</p> 
-            </div>
-            <div class="arquitectura-dos">
-                <img class="arquitectura-2" src="./src/multimedia/images/hotel_intercontinental.jpg" alt="Hotel en Nordelta">
-                <p class="parrafo-arquitectura">Hotel Intercontinental de Nordelta - Tigre - Bs. As.</p>
-            </div>
-            <div class="arquitectura-tres">
-                <img class="arquitectura-3" src="./src/multimedia/images/torre_foster.jpg" alt="Torre en España">
-                <p class="parrafo-arquitectura">Torre Foster - Madrid - España</p>
-            </div>
-            <div class="arquitectura-cuatro">
-                <img class="arquitectura-4" src="./src/multimedia/images/torres_quartier.jpg" alt="Torres en San Telmo">
-                <p class="parrafo-arquitectura">Torres Quartier - San Telmo - C.A.B.A.</p>
-            </div>
-        </div>
-    </section>
+        <div class="container"> 
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img class="arquitectura-1" src="./src/multimedia/images/complejo_Horizons.jpg" class="d-block w-100" height="400vh" alt="Complejo de viviendas en Vicente Lopez">
+                        <p class="parrafo-arquitectura text-md-start align-items-baseline">Complejo Horizons - Vte. López - Bs. As.</p> 
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img class="arquitectura-2" src="./src/multimedia/images/hotel_intercontinental.jpg" class="d-block w-100" height="400vh" alt="Hotel en Nordelta">
+                        <p class="parrafo-arquitectura text-md-start align-items-baseline">Hotel Intercontinental de Nordelta - Tigre - Bs. As.</p>
+                </div>
 
+        <div class="container"> 
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img class="arquitectura-3" src="./src/multimedia/images/torre_foster.jpg" class="d-block w-100" heighr="600vh" alt="Torre en España">
+                        <p class="parrafo-arquitectura text-md-start align-items-baseline">Torre Foster - Madrid - España</p>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                        <img class="arquitectura-4" src="./src/multimedia/images/torres_quartier.jpg" class="d-block w-100" heighr="600vh" alt="Torres en San Telmo">
+                            <p class="parrafo-arquitectura text-md-start align-items-baseline">Torres Quartier - San Telmo - C.A.B.A.</p>
+                </div> 
+            </div> 
+        </div>
+    </div>
+    </section>
+<!-- Fin Sección Arquitectura -->
+<!-- Sección Ingeniería -->
     <section id="Ingenieria">
-        <h2>Ingenieria</h2>
-        <div class="container-ingenieria">
-            <div class="ingenieria-uno">
-                <img class="ingenieria" src="./src/multimedia/images/paso_bajo_nNivel_olazabal_superi.jpg" alt="Obra ferroviaria en Belgrano">
-                <p class="parrafo-ingenieria">Paso Bajo Nivel Olazábal - Superí - C.A.B.A.</p>
+        <h2>Ingeniería</h2>
+        <div class="container"> 
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <img class="ingenieria-1" src="./src/multimedia/images/paso_bajo_nivel_olazabal_superi.jpg" class="d-block w-50" height="300vh" alt="Paso bajo nivel Olazábal-Superí">
+                        <p class="parrafo-ingenieria text-md-start align-items-baseline">Paso Bajo Nivel Olazábal-Superí</p> 
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                        <img class="ingenieria-2" src="./src/multimedia/images/pase_del_bajo.jpg" class="d-block w-50" height="300vh" alt="pase-del-bajo">
+                            <p class="parrafo-ingenieria text-md-start align-items-baseline">Paseo del Bajo - C.A.B.A.</p> 
+                </div>
+                        
+                        
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                        <img class="ingenieria-3" src="./src/multimedia/images/dique_San Juan.jpg"class="d-block w-50" height="300vh" alt="Dique San Juan">
+                            <p class="parrafo-ingenieria text-md-start align-items-baseline">Dique San Juan - Pcia. San Juan</p>
+                </div>
             </div>
-            <div class="ingenieria-dos">
-                <img class="ingenieria-2" src="./src/multimedia/images/pase_del_bajo.jpg" alt="Paseo del Bajo en Retiro"> 
-                <p class="parrafo-ingenieria">Paseo del Bajo - C.A.B.A.</p>
+        </div> 
+    </section>    
+<!-- Fin Sección Ingeniería -->
+<!-- Sección Hidráulica -->
+    <section id="Hidráulicas">
+        <h2>Hidráulicas</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-6"> 
+                    <img class="hidraulica-1" src="./src/multimedia/images/saneamiento1.jpg" class="d-block w-100" height="400vh" alt="Saneamiento Arroyo El Gato de La Plata">
+                <p class="parrafo-hidraulica text-md-start align-items-baseline">Saneamiento del Arroyo El Gato - La Plata - Bs. As.</p>
             </div>
-            <div class="ingenieria-tres">
-                <img class="ingenieria-3" src="./src/multimedia/images/dique_San Juan.jpg" alt="Dique en San Juan">
-                <p class="parrafo-ingenieria">Dique San Juan - San Juan - Argentina</p>
+            <div class="col-xs-12 col-md-6 col-lg-6">
+                <img class="hidraulica-2" src="./src/multimedia/images/saneamiento_antes_después.jpg" class="d-block w-100" height="400vh" alt="Antes y despues Arroyo El Gato">
+                <p class="parrafo-hidraulica text-center align-items-baseline">Comparativa - antes y después</p>
             </div>
         </div>
     </section>
-
-    <section id="Hidraulicas">
-        <h2>Hidraulicas</h2>
-        <div class="container-hidraulica">
-            <div>
-                <img class="hidraulica" src="./src/multimedia/images/saneamiento1.jpg" alt="Saneamiento Arroyo El Gato de La Plata">
-                <p class="parrafo-hidraulica">Saneamiento del Arroyo El Gato - La Plata - Bs. As.</p>
-            </div>
-            <div>
-                <img class="hidraulica-2" src="./src/multimedia/images/saneamiento_antes_después.jpg" alt="Antes y despues Arroyo El Gato">
-                <p class="parrafo-hidraulica">Comparativa - antes y después</p>
-            </div>
-        </div>
-    </section>
-
+<!-- Fin Sección Hidráulica -->
+<!-- Sección Viales -->
     <section id="Viales">
         <h2>Viales</h2>
-        <div class="container-viales">
-            <div class="viales-uno">
-                <img class="viales" src="./src/multimedia/images/repavimentacio.jpg"
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                <img class="viales-1" src="./src/multimedia/images/repavimentacio.jpg" class="d-block w-50" height="400vh"
                 alt="Autopista La Plata - Bs. As.">
                 <p class="parrafo-viales">Repavimentación Autopista La Plata - Bs. As.</p>
             </div>
-            <div class="viales-dos">
-                <img class="viales-2" src="./src/multimedia/images/puente_la_noria.jpg" alt="Puente La Noria">
+        
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <img class="viales-2" src="./src/multimedia/images/puente_la_noria.jpg" class="d-block w-50" height="400vh" alt="Puente La Noria">
                 <p class="parrafo-viales">Puente La Noria</p>
             </div>
-            <div class="viales-tres">
-                <img class="viales-3" src="./src/multimedia/images/extension_Buen_Ayre_ruta_2.jpg" alt="Extensión Buen Ayre">
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <img class="viales-3" src="./src/multimedia/images/extension_Buen_Ayre_ruta_2.jpg" class="d-block w-50" height="auto" alt="Extensión Buen Ayre">
                 <p class="parrafo-viales">Ampliación Autopista del Buen Ayre - Ruta 2</p>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <div class="container-redes">
-            <p class="parrafo-footer">Seguinos en:</p>
-            <img class="icono-Fc" src="./src/multimedia/images/icono-facebook.jpg" alt="Logo de Facebook"></a>
-
-            <img class="icono-Ig" src="./src/multimedia/images/icono-instagram.jpg" alt="Logo de instagram"></a>
-
-            <img class="icono-In" src="./src/multimedia/images/icono-linkedin.webp" alt="Logo de Linkedin"></a>
-
-            <img class="icono-Tw" src="./src/multimedia/images/icono-twitter.png" alt="Logo de Twitter"></a>
         </div>
+    </section>
+<!-- Fin Sección Viales -->
+<!-- Footer -->
+    <footer>
+        <div class="container-footer">
+            <div class="col-xs-12 col-md-6 col-lg-4">
+            <p class="parrafo-footer">Seguinos en:</p>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-2">
+            <img class="icono-Fc" src="./src/multimedia/images/icono-facebook.jpg" class="d-block w-25" height="100vh" alt="Logo de Facebook"></a>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-2">
+            <img class="icono-Ig" src="./src/multimedia/images/icono-instagram.jpg" class="d-block w-25" height="100vh" alt="Logo de instagram"></a>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-2">
+            <img class="icono-In" src="./src/multimedia/images/icono-linkedin.webp" class="d-block w-25" height="100vh" alt="Logo de Linkedin"></a>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-2">
+            <img class="icono-Tw" src="./src/multimedia/images/icono-twitter.png" class="d-block w-25" height="100vh" alt="Logo de Twitter"></a>
+            </div>
+        </div>
+        
         <div class="container-contacto">
             <a href="src/paginas/contacto.html">CONTACTANOS</a>
         </div>
-        
-        <div class="imagen-mapa">
+
+        <div class="container-mapa">
+            <div class="col">
             <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.745745674591!2d-58.37698548477012!3d-34.61059028045765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccad47f191885%3A0xb054b88264dae811!2sPer%C3%BA%20222%2C%20C1067AAF%20CABA!5e0!3m2!1ses-419!2sar!4v1639326744380!5m2!1ses-419!2sar"
-            width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
         </div>
+        </div>
     </footer>
+    <!-- Fin Footer -->
 
-</body>
+    <!--JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body> 
 
 </html>
