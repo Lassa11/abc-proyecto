@@ -14,6 +14,11 @@
     background-color: rgb(7, 7, 7);
 }
 
+.nav-item a:hover {
+    color: rgb(253, 44, 7);
+    font-weight: bold;
+}
+
 /* Fin de Header */
 
 .video-puente {
@@ -86,10 +91,12 @@ h2 {
 }
 
 .parrafo-arquitectura {
+    display: flex;
+    justify-content: center;
+    text-align: center;
     font-size: 20px;
     font-family: 'Nunito Sans', sans-serif;
-    padding: 5px 0;
-    margin: 5px;
+    padding: 5px 10px;
 }
 
 .arquitectura-1, .arquitectura-2, 
@@ -98,19 +105,9 @@ h2 {
     width: 450px;
     height: 400px;
     object-fit: cover;
-    padding: 35px;
-    animation-name: cambiartamaño;
-    animation-duration: 4s;
+    padding: 10px;
+    margin: 30px;
 }
-
-@keyframes cambiartamaño {
-    0% {
-    transform: scale(.5);
-    }
-    100% {
-    transform: scale(1);
-    }
-} 
 
 /* ----- FIN SECCION ARQUITECTURA ------ */
 
@@ -175,21 +172,24 @@ h2 {
     align-items: center;
     padding: 20px 0;
     display: flex;
+    justify-content: center;
 }
 
 .parrafo-footer {
     text-align: center;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Nunito Sans', sans-serif;
+    padding: 20px;
 }
 
 .icono-Fc, .icono-Ig, .icono-In, .icono-Tw {
-    max-width: 100%;
+    /* display: grid;
+    grid-template-columns: max-content; */
     width: 90px;
     height: 90px;
     padding: 25px;
-    margin: 5px;
+    margin: 2px;
 }
 
 .container-contacto {
@@ -237,9 +237,19 @@ h2 {
 
 /* FIN DE FOOTER */
 
+/* Página de Contacto */
 
+a:visited {
+    color: rgb(8, 143, 42);
+}
 
+.form-control:focus {
+    background-color: rgb(186, 238, 181);
+}
 
+.container-contacto h3:hover {
+    color: indianred;
+}
 
 
 
