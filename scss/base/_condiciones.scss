@@ -1,0 +1,34 @@
+
+
+
+@mixin condicion($colores) {
+    background-color: $colores;
+
+    @if $colores == rgb(128, 141, 6) {
+        border: 2px solid black;
+        
+    }@else {
+        border: 1px dotted #9c0d79;
+    }
+}
+
+.bg-condicion {
+    @include condicion(rgb(128, 141, 6),
+    );
+}
+
+@mixin condicion($colores) {
+    background-color: $colores;
+
+    @if $colores == rgb(128, 141, 6) {
+        max-width: 50px; 
+    }@else  {
+        background-color: blueviolet;
+    }
+
+}
+
+.bg-condicion {
+    @include condicion(rgb(128, 141, 6),
+    );
+}

@@ -1,0 +1,23 @@
+
+%flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%relleno-titulo {
+    background-color: nth($colores, 5);
+    padding: 20px;
+    text-align: center;
+    color: nth($colores, 9);
+    font-size: 40px;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+%parrafos {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    padding: 25px;
+}

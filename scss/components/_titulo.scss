@@ -1,0 +1,66 @@
+
+@import "../base/variables";
+@import "../base/mapas";
+@import "../base/extends";
+@import "../base/mxin";
+@import "../base/condiciones";
+
+
+.titulo-principal {
+    $bg-titulos1: nth($colores, 3);
+    padding: 30px 20px;
+    font-size: 50px;
+    color: nth($colores, 4);
+    font-weight: bold;
+    font-style: initial;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    animation-name: cambiarcolor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+    @keyframes cambiarcolor {
+        0% {
+            background-color: nth($colores, 5);
+            color: nth($colores, 7);
+            @include prefijos(matrix(1));
+        }
+        50% {
+            @include prefijos(ease-in-out);
+            background-color: brown;
+        }
+        100% {
+            background-color: nth($colores, 9);
+            color: gold;
+        }
+    }
+}
+
+.subtitulo {
+    color: map-get($subtitulo, text-color-subtitulo);
+    padding: 40px;
+    font-size: 30px;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+}
+
+.parrafo-descripcion {
+    @extend %flex;
+    margin: 10px;
+    padding: 10px;
+    color: nth($colores, 14);
+    font-size: 20px;
+    font-family: $letra;
+}
+
+.secction, #Arquitectura, #Ingenieria, #Hidráulicas, #Viales {
+    h2 {
+    @extend %relleno-titulo;
+    margin: 10px;
+
+    &:hover {
+        color: $coloruno;
+    } 
+}
+}

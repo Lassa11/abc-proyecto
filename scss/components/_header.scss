@@ -1,0 +1,19 @@
+
+@import "../base/listas";
+
+body {
+    overflow-x: hidden !important;
+}
+
+.header-container {
+    
+    background-color: nth($colores, 13);
+    a {
+        color: nth($colores, 1);
+        
+        &:hover {
+            color: rgb(253, 44, 7);
+        }
+    }
+}
+
