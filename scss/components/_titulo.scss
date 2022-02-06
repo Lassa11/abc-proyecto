@@ -54,7 +54,7 @@
     font-family: $letra;
 }
 
-.secction, #Arquitectura, #Ingenieria, #Hidráulicas, #Viales {
+.section, #Arquitectura, #Ingenieria, #Hidráulicas, #Viales {
     h2 {
     @extend %relleno-titulo;
     margin: 10px;
